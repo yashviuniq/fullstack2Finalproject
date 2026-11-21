@@ -1,0 +1,25 @@
+# Node & Expo dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+target/
+dist/
+build/
+.expo/
+web-build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.iml
+*.swp
