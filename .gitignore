@@ -23,3 +23,5 @@ Thumbs.db
 .vscode/
 *.iml
 *.swp
+
+*.zip

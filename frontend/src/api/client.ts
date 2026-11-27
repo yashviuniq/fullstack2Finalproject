@@ -4,7 +4,14 @@ import * as SecureStore from 'expo-secure-store';
 
 const TOKEN_KEY = 'student_mgmt_jwt_token';
 
-const API_BASE_URL = (process.env as Record<string, string | undefined>).EXPO_PUBLIC_API_URL || 'http://localhost:8080';
+const getApiBaseUrl = () => {
+  if (Platform.OS === 'web') {
+    return 'http://localhost:8080';
+  }
+  return (process.env as Record<string, string | undefined>).EXPO_PUBLIC_API_URL || 'http://10.0.2.2:8080';
+};
+
+const API_BASE_URL = getApiBaseUrl();
 
 export const apiClient = axios.create({
   baseURL: API_BASE_URL,
